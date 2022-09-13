@@ -63,7 +63,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 		createDialogForm(obj, "/gui/DepartmentForm.fxml", parentStage);
 	}
 
-	public void setDepatmentService(DepartmentService service) {
+	public void setDepartmentService(DepartmentService service) {
 		this.service = service;
 	}
 
@@ -99,7 +99,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 
 			DepartmentFormController controller = loader.getController();
 			controller.setDepartment(obj);
-			controller.setDepartmService(new DepartmentService());
+			controller.setDepartmentService(new DepartmentService());
 			controller.subscribeDataChangeListener(this);
 			controller.updateFormData();
 
